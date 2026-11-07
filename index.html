@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Taskeen Fatima</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #fff0f5, #f1e4ff, #fff8e8);
+    color: #59345e;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255,255,255,0.8);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: #a47725;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #714477;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #d49b36;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.hero-content {
+    animation: appear 2s ease;
+}
+
+.small-title {
+    color: #bd913b;
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 85px);
+    color: #79508e;
+    margin: 25px 0;
+    text-shadow: 2px 3px 5px #ffffff;
+}
+
+.name {
+    font-size: clamp(35px, 7vw, 65px);
+    font-style: italic;
+    color: #c28a28;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, #a879bb, #d7a1c5);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px #a879bb55;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: #bd913b;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating Decorations */
+
+.floating {
+    position: fixed;
+    top: -40px;
+    z-index: 20;
+    pointer-events: none;
+    animation: fall 7s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Sections */
+
+section {
+    padding: 75px 8%;
+}
+
+.heading {
+    text-align: center;
+    color: #81558f;
+    font-size: clamp(30px, 5vw, 45px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.description {
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.gallery-card {
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #79508e25;
+    transition: 0.4s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+.gallery-card h3 {
+    text-align: center;
+    padding: 15px 5px 5px;
+    color: #a47725;
+}
+
+/* Cake Section */
+
+.cake-section {
+    text-align: center;
+    background: #ffffff75;
+}
+
+.cake {
+    font-size: 110px;
+    animation: bounce 2s infinite;
+    margin: 20px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Surprise */
+
+.surprise-box {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 40px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 35px #79508e20;
+}
+
+#message {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background: #fff0f5;
+    border-radius: 20px;
+    line-height: 2;
+    font-size: 18px;
+    animation: appear 1s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    background: #fffaf5;
+    color: #986f9d;
+}
+
+/* Mobile Responsive */
+
+@media(max-width: 768px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 13px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .gallery-card img {
+        height: auto;
+        max-height: 500px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+    <div class="logo">💜 Taskeen's Birthday</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#surprise">Surprise</a>
+    </div>
+
+</nav>
+
+<!-- Homepage -->
+
+<header class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            A SPECIAL DAY FULL OF LOVE
+        </div>
+
+        <h1>Happy Birthday</h1>
+
+        <div class="name">
+            Taskeen Fatima
+        </div>
+
+        <p>
+            May your life always be filled with
+            happiness, beautiful dreams,
+            endless smiles and wonderful memories.
+            You deserve all the love in the world! 💜
+        </p>
+
+        <button class="btn" onclick="showCelebration()">
+            Let's Celebrate 🎉
+        </button>
+
+    </div>
+
+</header>
+
+<!-- Gallery -->
+
+<section id="gallery">
+
+    <h2 class="heading">
+        Beautiful Birthday Memories 🌸
+    </h2>
+
+    <p class="description">
+        A beautiful collection of your special moments.
+    </p>
+
+    <div class="gallery">
+
+        <div class="gallery-card">
+
+            <img src="images/photo1.png"
+            alt="Birthday Photo 1">
+
+            <h3>Golden Princess 🌼</h3>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/photo2.png"
+            alt="Birthday Photo 2">
+
+            <h3>Beautiful Memories 👑</h3>
+
+        </div>
+
+        <div class="gallery-card">
+
+            <img src="images/photo3.png"
+            alt="Birthday Photo 3">
+
+            <h3>Lavender Dreams 🦋</h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Cake -->
+
+<section class="cake-section">
+
+    <h2 class="heading">
+        Time For Birthday Cake!
+    </h2>
+
+    <div class="cake">🎂</div>
+
+    <p class="description">
+        Make a beautiful wish and enjoy your special day!
+    </p>
+
+</section>
+
+<!-- Surprise -->
+
+<section id="surprise">
+
+    <h2 class="heading">
+        A Special Surprise For You 💌
+    </h2>
+
+    <div class="surprise-box">
+
+        <h2>Something Special Is Waiting!</h2>
+
+        <button class="btn" onclick="openSurprise()">
+            Open Your Surprise 🎁
+        </button>
+
+        <div id="message">
+
+            <h2>Dear Taskeen Fatima 💜</h2>
+
+            <p>
+                You are a beautiful blessing.
+                May every day of your life bring
+                new happiness, beautiful opportunities
+                and countless reasons to smile.
+
+                May all your dreams come true.
+                Keep shining like a star!
+
+                <br><br>
+
+                Happy Birthday!
+                Lots of love and best wishes! 🌹
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    Made With ❤️ For Taskeen Fatima
+
+    <br><br>
+
+    Happy Birthday! 🎂
+
+</footer>
+
+<script>
+
+// Falling Decorations
+
+function createDecoration() {
+
+    const decoration = document.createElement("div");
+
+    decoration.className = "floating";
+
+    const items = ["💜", "💖", "🌸", "🦋", "✨", "💛"];
+
+    decoration.innerHTML =
+    items[Math.floor(Math.random() * items.length)];
+
+    decoration.style.left = Math.random() * 100 + "vw";
+
+    decoration.style.fontSize =
+    (15 + Math.random() * 25) + "px";
+
+    decoration.style.animationDuration =
+    (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(decoration);
+
+    setTimeout(() => {
+        decoration.remove();
+    }, 8000);
+
+}
+
+// Celebration Button
+
+function showCelebration() {
+
+    for (let i = 0; i < 35; i++) {
+        setTimeout(createDecoration, i * 70);
+    }
+
+    document.querySelector("#gallery")
+    .scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+// Surprise Button
+
+function openSurprise() {
+
+    document.getElementById("message").style.display =
+    "block";
+
+    for (let i = 0; i < 50; i++) {
+        setTimeout(createDecoration, i * 50);
+    }
+
+}
+
+// Continuous Animation
+
+setInterval(createDecoration, 700);
+
+</script>
+
+</body>
+</html>
